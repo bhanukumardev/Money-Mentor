@@ -258,6 +258,6 @@ Built with ❤️ by the MoneyMentor team as part of Economic Times GenAI Hackat
 
 ### ⭐ If this project helped you, please give it a star!
 
-[Star the Repository](https://github.com/bhanukumardev/Money-Mentor) • [Report Issues](https://github.com/bhanukumardev/Money-Mentor/issues) • [View Demo](https://money-mentor.vercel.app)
+[Star the Repository](https://github.com/bhanukumardev/Money-Mentor) • [Report Issues](https://github.com/bhanukumardev/Money-Mentor/issues) • [View Demo](https://money-mentor-zeta.vercel.app/)
 
 </div>

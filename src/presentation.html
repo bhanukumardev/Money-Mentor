@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money-Mentor | ET Hackathon Presentation</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B263B;
+            --orange: #FB8500;
+            --light-bg: #F8F9FA;
+            --text-dark: #333;
+            --text-light: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Calibri', 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Slide Container */
+        .slide {
+            width: 100%;
+            height: 100vh;
+            padding: 60px 80px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            page-break-after: always; /* Forces new page in PDF */
+            overflow: hidden;
+        }
+
+        /* Branding Elements */
+        .et-logo {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            background: var(--orange);
+            color: white;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            border-radius: 4px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            left: 80px;
+            right: 80px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 10px;
+            color: #777;
+        }
+
+        /* Dark Slides (Title & Thank You) */
+        .dark-slide {
+            background-color: var(--navy);
+            color: var(--text-light);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .dark-slide .footer {
+            border-top-color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Light Slides */
+        .light-slide {
+            background-color: var(--light-bg);
+        }
+
+        /* Content Styles */
+        .title-main { font-size: 4rem; margin-bottom: 10px; color: var(--orange); }
+        .tagline { font-size: 1.5rem; opacity: 0.9; margin-bottom: 30px; }
+        .pills { display: flex; gap: 15px; justify-content: center; }
+        .pill { background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 20px; border: 1px solid var(--orange); font-size: 0.9rem; }
+
+        .section-title { font-size: 2.5rem; color: var(--navy); margin-bottom: 30px; border-left: 8px solid var(--orange); padding-left: 20px; }
+        
+        .grid-3x2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--orange);
+        }
+
+        .card h3 { color: var(--navy); margin-bottom: 10px; }
+        .icon-circle { 
+            width: 50px; height: 50px; background: var(--navy); color: var(--orange); 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            margin-bottom: 15px; font-size: 1.2rem; font-weight: bold;
+        }
+
+        .stat-callout {
+            background: var(--navy);
+            color: var(--orange);
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 2rem;
+            text-align: center;
+            margin: auto 0;
+        }
+
+        .journey-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .step { text-align: center; flex: 1; }
+        .step-num { font-size: 3rem; font-weight: bold; color: var(--orange); opacity: 0.3; }
+
+        /* Tech Stack Visual */
+        .stack-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .stack-layer {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+        .layer-label { font-weight: bold; color: var(--navy); width: 150px; }
+
+        /* Print Specifics */
+        @media print {
+            .slide { height: 100vh; overflow: hidden; }
+            body { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="slide dark-slide">
+        <div class="et-logo">ET HACKATHON 2026</div>
+        <h1 class="title-main">Money-Mentor</h1>
+        <p class="tagline">Your AI-Powered Financial Navigator</p>
+        <div class="pills">
+            <span class="pill">⚡ AI-Driven</span>
+            <span class="pill">🔒 Secure</span>
+            <span class="pill">📈 Insightful</span>
+        </div>
+        <div style="margin-top: 40px; font-size: 1.1rem;">
+            Presented by <strong>Bhanu Kumar Dev</strong>
+        </div>
+        <div class="footer">
+            <span>Money-Mentor | ET Hackathon Project</span>
+            <span>Slide 1</span>
+        </div>
+    </section>
+
+    <section class="slide light-slide">
+        <div class="et-logo">ET</div>
+        <h2 class="section-title">The Financial Blind Spot</h2>
+        <div class="stat-callout">
+            "72% of young professionals feel overwhelmed by personal finance management."
+        </div>
+        <div style="display: flex; gap: 40px; margin-top: 40px;">
+            <div class="card" style="flex:1"><h3>Complexity</h3><p>Financial jargon creates a massive barrier to entry for new earners.</p></div>
+            <div class="card" style="flex:1"><h3>Inaction</h3><p>Difficulty in manual tracking leads to unplanned overspending.</p></div>
+            <div class="card" style="flex:1"><h3>No Guidance</h3><p>Lack of 24/7 personalized advice for small-scale investors.</p></div>
+        </div>
+        <div class="footer">
+            <span>Money-Mentor | Problem Statement</span>
+            <span>Slide 2</span>
+        </div>
+    </section>
+
+    <section class="slide light-slide">
+        <div class="et-logo">ET</div>
+        <h2 class="section-title">Meet Money-Mentor</h2>
+        <p style="font-size: 1.5rem; color: #555; margin-bottom: 40px;">
+            A conversational AI platform that simplifies finance by turning complex data into actionable insights.
+        </p>
+        <div class="grid-3x2">
+            <div class="card"><div class="icon-circle">01</div><h3>Democratization</h3><p>Expert-level advice made accessible to everyone.</p></div>
+            <div class="card"><div class="icon-circle">02</div><h3>Automation</h3><p>Real-time tracking and intelligent categorization.</p></div>
+            <div class="card"><div class="icon-circle">03</div><h3>Literacy</h3><p>Interactive, AI-led learning modules for wealth building.</p></div>
+        </div>
+        <div class="footer">
+            <span>Money-Mentor | Solution Overview</span>
+            <span>Slide 3</span>
+        </div>
+    </section>
+
+    <section class="slide light-slide">
+        <div class="et-logo">ET</div>
+        <h2 class="section-title">Key Features</h2>
+        <div class="grid-3x2">
+            <div class="card"><h3>AI Chatbot</h3><p>24/7 financial advisor using Gemini 1.5 Pro.</p></div>
+            <div class="card"><h3>Expense Tracker</h3><p>Automated categorization of all your spending.</p></div>
+            <div class="card"><h3>Smart Budgeting</h3><p>Predictive budgeting based on historical data.</p></div>
+            <div class="card"><h3>Goal Planner</h3><p>Phased savings for life's biggest milestones.</p></div>
+            <div class="card"><h3>Investment Insights</h3><p>Personalized portfolio suggestions for growth.</p></div>
+            <div class="card"><h3>Security Vault</h3><p>Bank-grade encryption for all user data.</p></div>
+        </div>
+        <div class="footer">
+            <span>Money-Mentor | Features</span>
+            <span>Slide 4</span>
+        </div>
+    </section>
+
+    <section class="slide light-slide">
+        <div class="et-logo">ET</div>
+        <h2 class="section-title">Technical Architecture</h2>
+        <div class="stack-container">
+            <div class="stack-layer">
+                <span class="layer-label">Frontend</span>
+                <span>Next.js 15, React 19, Tailwind CSS (Responsive Design)</span>
+            </div>
+            <div class="stack-layer" style="border-left: 8px solid var(--orange);">
+                <span class="layer-label">AI Engine</span>
+                <span>Google Gemini 1.5 Pro API, LangChain (RAG Implementation)</span>
+            </div>
+            <div class="stack-layer">
+                <span class="layer-label">Backend</span>
+                <span>Node.js, Vercel Serverless Functions</span>
+            </div>
+            <div class="stack-layer">
+                <span class="layer-label">Database</span>
+                <span>Supabase (PostgreSQL), Firebase Auth</span>
+            </div>
+            <div class="stack-layer">
+                <span class="layer-label">Deployment</span>
+                <span>Vercel (CI/CD Pipeline)</span>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Money-Mentor | Tech Stack</span>
+            <span>Slide 5</span>
+        </div>
+    </section>
+
+    <section class="slide dark-slide">
+        <div class="et-logo">ET HACKATHON 2026</div>
+        <h1 style="color: var(--orange); font-size: 3.5rem;">Thank You!</h1>
+        <p style="margin: 20px 0; font-size: 1.2rem;">Let's bridge the wealth gap together.</p>
+        
+        <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; display: inline-block; margin-top: 20px;">
+            <p><strong>GitHub:</strong> github.com/bhanukumardev/Money-Mentor</p>
+            <p><strong>Live Demo:</strong> money-mentor-zeta.vercel.app</p>
+        </div>
+
+        <div class="footer">
+            <span>Bhanu Kumar Dev</span>
+            <span>Final Slide</span>
+        </div>
+    </section>
+
+</body>
+</html>
