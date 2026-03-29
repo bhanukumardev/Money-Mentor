@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 40 20% 95%;
+
+    --card: 222 40% 9%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 222 40% 9%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 42 100% 55%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 160 60% 45%;
+    --secondary-foreground: 222 47% 6%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 42 80% 48%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 16%;
+    --input: 222 30% 16%;
+    --ring: 42 100% 55%;
+
+    --radius: 0.75rem;
+
+    --gold-glow: 42 100% 55%;
+    --emerald-glow: 160 60% 45%;
+    --surface-glass: 222 40% 10%;
+
+    --sidebar-background: 222 40% 8%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 42 100% 55%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 222 30% 16%;
+    --sidebar-ring: 42 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(42, 100%, 55%), hsl(32, 100%, 50%));
+  }
+  .emerald-gradient {
+    background: linear-gradient(135deg, hsl(160, 60%, 45%), hsl(170, 70%, 35%));
+  }
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(42, 100%, 65%), hsl(32, 100%, 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-emerald-gradient {
+    background: linear-gradient(135deg, hsl(160, 70%, 55%), hsl(170, 80%, 45%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow-gold {
+    box-shadow: 0 0 40px -10px hsl(42, 100%, 55% / 0.3);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 40px -10px hsl(160, 60%, 45% / 0.3);
+  }
+  .hero-glow {
+    background: radial-gradient(
+      ellipse 80% 50% at 50% 0%,
+      hsl(42, 100%, 55% / 0.08),
+      transparent
+    );
+  }
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(222, 30%, 16% / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(222, 30%, 16% / 0.4) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
