@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import PageLayout from "@/components/PageLayout";
-import { Heart, Shield, TrendingUp, Wallet, Calculator, Clock, ArrowRight } from "lucide-react";
+import { Gauge, Shield, TrendingUp, Wallet, Calculator, Clock, ArrowRight } from "lucide-react";
 
 const dimensions = [
   { icon: Shield, label: "Emergency Fund", key: "emergency" as const, q: "Months of expenses saved?", max: 6 },
-  { icon: Heart, label: "Insurance Coverage", key: "insurance" as const, q: "Life + health cover (₹L)?", max: 100 },
+  { icon: Gauge, label: "Insurance Coverage", key: "insurance" as const, q: "Life + health cover (₹L)?", max: 100 },
   { icon: TrendingUp, label: "Investment Diversification", key: "investment" as const, q: "No. of asset classes invested?", max: 5 },
   { icon: Wallet, label: "Debt Health", key: "debt" as const, q: "EMI-to-income ratio %?", max: 50 },
   { icon: Calculator, label: "Tax Efficiency", key: "tax" as const, q: "Tax-saving investments (₹L)?", max: 3 },
@@ -36,7 +36,7 @@ const MoneyScore = () => {
       <div className="container max-w-4xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <div className="emerald-gradient rounded-2xl p-4 w-fit mx-auto mb-4">
-            <Heart className="h-8 w-8 text-secondary-foreground" />
+            <Gauge className="h-8 w-8 text-secondary-foreground" />
           </div>
           <h1 className="font-heading text-3xl md:text-5xl font-bold">
             Money Health <span className="text-emerald-gradient">Score</span>

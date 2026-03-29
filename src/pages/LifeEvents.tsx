@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import PageLayout from "@/components/PageLayout";
-import { Baby, Gift, Heart, Building, Briefcase, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Baby, Gift, Users, Building, Briefcase, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const events = [
   { icon: Gift, label: "Got a Bonus", key: "bonus", color: "gold-gradient" },
-  { icon: Heart, label: "Getting Married", key: "marriage", color: "emerald-gradient" },
+  { icon: Users, label: "Getting Married", key: "marriage", color: "emerald-gradient" },
   { icon: Baby, label: "New Baby", key: "baby", color: "gold-gradient" },
   { icon: Building, label: "Buying a House", key: "house", color: "emerald-gradient" },
   { icon: Briefcase, label: "Inheritance", key: "inheritance", color: "gold-gradient" },

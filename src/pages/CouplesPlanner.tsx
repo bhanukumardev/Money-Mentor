@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import PageLayout from "@/components/PageLayout";
-import { Users, ArrowRight, CheckCircle2, Heart } from "lucide-react";
+import { Users, ArrowRight, CheckCircle2, CircleUser } from "lucide-react";
 
 const CouplesPlanner = () => {
   const [form, setForm] = useState({
@@ -51,7 +51,7 @@ const CouplesPlanner = () => {
             {[1, 2].map(p => (
               <div key={p} className={`glass-card p-8 ${p === 1 ? "glow-gold" : "glow-emerald"}`}>
                 <div className="flex items-center gap-2 mb-4">
-                  <Heart className={`h-5 w-5 ${p === 1 ? "text-primary" : "text-secondary"}`} />
+                  <CircleUser className={`h-5 w-5 ${p === 1 ? "text-primary" : "text-secondary"}`} />
                   <h3 className="font-heading font-semibold">Partner {p}</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

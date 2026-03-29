@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Flame, Heart, Baby, Calculator, Users, BarChart3, ArrowRight } from "lucide-react";
+import { Flame, Shield, Baby, Calculator, Users, BarChart3, ArrowRight } from "lucide-react";
 
 const features = [
   {
@@ -12,7 +12,7 @@ const features = [
     glow: "glow-gold",
   },
   {
-    icon: Heart,
+    icon: Shield,
     title: "Money Health Score",
     desc: "5-minute assessment across 6 dimensions: emergency fund, insurance, investments, debt, tax efficiency, retirement.",
     path: "/money-score",
